@@ -1,0 +1,26 @@
+{
+  "name": "product-registration-nodejs",
+  "version": "1.0.0",
+  "description": "## Sobre o projeto",
+  "main": "./src/index.js",
+  "scripts": {
+    "dev": "nodemon {./src/index.js}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vieira-a/product-registration-nodejs.git"
+  },
+  "keywords": [],
+  "author": "Anderson Vieira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vieira-a/product-registration-nodejs/issues"
+  },
+  "homepage": "https://github.com/vieira-a/product-registration-nodejs#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
