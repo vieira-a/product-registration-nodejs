@@ -13,40 +13,46 @@
 **Requisitos funcionais**
 O que a aplicação deve permitir fazer
 
-- [ ] Cadastrar um novo produto
-- [ ] Atualizar os dados do produto
-- [ ] Obter dados do produto
-- [ ] Realizar inclusão no saldo do produto
-- [ ] Realizar retirada no saldo do produto
-- [ ] Buscar o saldo do produto
-- [ ] Buscar saldo do produto por data
-- [ ] Deletar um produto
+- Cadastrar um novo produto
+- Atualizar os dados do produto
+- Obter dados do produto
+- Realizar inclusão no saldo do produto
+- Realizar retirada no saldo do produto
+- Buscar o saldo do produto
+- Buscar saldo do produto por data
+- Deletar um produto
 
 
 **Cadastra do produtos**
 
-product = {
-    ncm,
-    name,
-    movements
-}
+products = {ncm, name, movements}
 
 - [x] Criar rota com método POST para receber um novo cadastro;
-- [x] Configurar requisição no Insomnia;
+- [x] Configurar requisição POST no Insomnia;
 - [x] Fazer teste de novo cadastro adicionando o body na requisição.
 
 **Validação do produto**
 
-- [ ] Não permitir cadastro de produto com o mesmo NCM
+- [x] Não permitir cadastro de produto com o mesmo NCM
+
+**Atualizar os dados do produto**
+
+- [ ] Criar rota com o método PUT para alteração de dados do produto, adicionar o NCM como parâmetro de identificação.
+- [ ] Configurar requisição PUT no Insomnia;
+- [ ] Fazer teste alterando o cadastro de um produto com o id especificado adicionando o body na requisição.
+
+**Buscar o saldo do produto**
+
+- [x] Criar rota para obter o saldo do em estoque do produto através do movements
 
 
 **Regras de negócio**
 O que a aplicação não deve permitir fazer
 
-- [ ] Cadastrar um produto com o mesmo NCM
-- [ ] Realizar inclusão no saldo do produto não existente
-- [ ] Realizar retirada no saldo do produto não existente
-- [ ] Realizar retirada quando o saldo do produto for insuficiente
-- [ ] Buscar saldo do produto não existente
-- [ ] Deletar um produto não existente
+- Cadastrar um produto com o mesmo NCM
+- Realizar inclusão no saldo do produto não existente
+- Realizar retirada no saldo do produto não existente
+- Realizar retirada quando o saldo do produto for insuficiente
+- Buscar saldo do produto não existente
+- Deletar um produto não existente
 

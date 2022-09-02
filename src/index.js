@@ -1,4 +1,4 @@
-const { json } = require('express');
+const { json, request } = require('express');
 
 const express = require('express');
 
@@ -16,10 +16,10 @@ app.post('/products', function(req, res) {
 
     const { ncm, name } = req.body;
 
-    const productNcmExists = products.some(
+    const productExists = products.some(
         (product) => product.ncm === ncm);
 
-    if(productNcmExists) {
+    if(productExists) {
         return res.status(400).json({error: "Product NCM already exists."})
     }
 
@@ -33,3 +33,13 @@ app.post('/products', function(req, res) {
     return res.status(201).send(products);
 
 });
+
+app.get('/movements/:ncm', function(req, res) {
+    
+    const { ncm } = req.params;
+
+    const product = products.find(product => product.ncm === ncm);
+    
+    return res.json(product.movements)
+
+})
