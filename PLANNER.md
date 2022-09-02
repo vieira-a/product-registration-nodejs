@@ -22,6 +22,24 @@ O que a aplicação deve permitir fazer
 - [ ] Buscar saldo do produto por data
 - [ ] Deletar um produto
 
+
+**Cadastra do produtos**
+
+product = {
+    ncm,
+    name,
+    movements
+}
+
+- [x] Criar rota com método POST para receber um novo cadastro;
+- [x] Configurar requisição no Insomnia;
+- [x] Fazer teste de novo cadastro adicionando o body na requisição.
+
+**Validação do produto**
+
+- [ ] Não permitir cadastro de produto com o mesmo NCM
+
+
 **Regras de negócio**
 O que a aplicação não deve permitir fazer
 
