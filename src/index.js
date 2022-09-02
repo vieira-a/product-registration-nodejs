@@ -16,6 +16,13 @@ app.post('/products', function(req, res) {
 
     const { ncm, name } = req.body;
 
+    const productNcmExists = products.some(
+        (product) => product.ncm === ncm);
+
+    if(productNcmExists) {
+        return res.status(400).json({error: "Product NCM already exists."})
+    }
+
     products.push({
         "id": uuidv4(),
         ncm,
