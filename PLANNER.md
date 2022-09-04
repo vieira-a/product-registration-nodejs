@@ -44,6 +44,7 @@ products = {ncm, name, movements}
 **Buscar o saldo do produto**
 
 - [x] Criar rota para obter o saldo do em estoque do produto através do movements
+- [x] Buscar saldo apenas de produto existente
 
 
 **Regras de negócio**

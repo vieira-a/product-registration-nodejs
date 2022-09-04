@@ -39,6 +39,10 @@ app.get('/movements/:ncm', function(req, res) {
     const { ncm } = req.params;
 
     const product = products.find(product => product.ncm === ncm);
+
+    if(!product) {
+        res.status(400).json({error: "Product not found."});
+    }
     
     return res.json(product.movements)
 
