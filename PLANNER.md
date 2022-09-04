@@ -22,7 +22,6 @@ O que a aplicação deve permitir fazer
 - Buscar saldo do produto por data
 - Deletar um produto
 
-
 **Cadastra do produtos**
 
 products = {ncm, name, movements}
@@ -41,9 +40,19 @@ products = {ncm, name, movements}
 - [ ] Configurar requisição PUT no Insomnia;
 - [ ] Fazer teste alterando o cadastro de um produto com o id especificado adicionando o body na requisição.
 
+**Operações de estoque**
+
+- [x] Criar entrada de saldo para um produto específico
+- [ ] Criar retirada de saldo para um produto específico
+
+
 **Buscar o saldo do produto**
 
 - [x] Criar rota para obter o saldo do em estoque do produto através do movements
+
+**Criar middleware para verificar se o produto existe**
+Aplicação:
+
 - [x] Buscar saldo apenas de produto existente
 
 

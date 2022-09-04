@@ -37,7 +37,7 @@ app.post('/products', function(req, res) {
 //Middleware: verify if product exists based on his NCM number
 function verifyProduct(req, res, next) {
 
-    const { ncm } = req.params;
+    const { ncm } = req.headers;
 
     const product = products.find(product => product.ncm === ncm);
 
@@ -51,10 +51,28 @@ function verifyProduct(req, res, next) {
 
 }
 
-app.get('/movements/:ncm', verifyProduct, function(req, res) {
+app.get('/movements/', verifyProduct, function(req, res) {
 
     const {product} = req;
     
     return res.json(product.movements);
+
+})
+
+app.post('/balance', verifyProduct, function(req, res) {
+    
+    const { amount } = req.body;
+
+    const { product } = req;
+
+    const balanceOperation = {
+        type: "entry",
+        amount,
+        created_at: new Date()
+    }
+
+    product.movements.push(balanceOperation);
+
+    return res.status(201).send();
 
 })
