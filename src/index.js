@@ -34,8 +34,9 @@ app.post('/products', function(req, res) {
 
 });
 
-app.get('/movements/:ncm', function(req, res) {
-    
+//Middleware: verify if product exists based on his NCM number
+function verifyProduct(req, res, next) {
+
     const { ncm } = req.params;
 
     const product = products.find(product => product.ncm === ncm);
@@ -43,7 +44,17 @@ app.get('/movements/:ncm', function(req, res) {
     if(!product) {
         res.status(400).json({error: "Product not found."});
     }
+
+    req.product = product;
+
+    return next()
+
+}
+
+app.get('/movements/:ncm', verifyProduct, function(req, res) {
+
+    const {product} = req;
     
-    return res.json(product.movements)
+    return res.json(product.movements);
 
 })
