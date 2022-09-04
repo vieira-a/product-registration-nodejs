@@ -76,3 +76,15 @@ app.post('/balance', verifyProduct, function(req, res) {
     return res.status(201).send();
 
 })
+
+app.put('/products', verifyProduct, function(req, res) {
+
+    const { name } = req.body;
+
+    const { product } = req;
+
+    product.name = name;
+
+    return res.status(201).send();
+
+})
