@@ -8,7 +8,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 - Node.js
 - Express.js
 
-# Sobre o Projeto
+## Sobre o Projeto
 Trata-se do desenvolvimento de uma API REST que irá simular as principais operações realizadas através de um cadastro de produtos, com suas devidas validações:
 
 **Operações**
@@ -43,3 +43,10 @@ Trata-se do desenvolvimento de uma API REST que irá simular as principais opera
 - Instale as dependências;
 - Inicie o servidor `npm run dev`;
 - Acesse: `http://localhost:7777`
+
+## O que aprendi
+- Configurar servidor Node.js;
+- Instalar dependências de desenvolvimento;
+- Principais métodos HTTP;
+- Configuração do Insomnia para simular funcionamento da API;
+- Como aplicar validações.
