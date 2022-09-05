@@ -12,6 +12,7 @@ app.use(json());
 
 const products = [];
 
+//Product register
 app.post('/products', function(req, res) {
 
     const { ncm, name } = req.body;
@@ -33,7 +34,6 @@ app.post('/products', function(req, res) {
     return res.status(201).send(products);
 
 });
-
 //Middleware: verify if product exists based on his NCM number
 function verifyProduct(req, res, next) {
 
@@ -50,7 +50,7 @@ function verifyProduct(req, res, next) {
     return next()
 
 }
-
+//Get product movements
 app.get('/movements/', verifyProduct, function(req, res) {
 
     const {product} = req;
@@ -58,7 +58,7 @@ app.get('/movements/', verifyProduct, function(req, res) {
     return res.json(product.movements);
 
 })
-
+//Get product informations
 app.get('/products', verifyProduct, function(req, res) {
 
     const { product } = req;
@@ -66,7 +66,7 @@ app.get('/products', verifyProduct, function(req, res) {
     return res.json(product);
 
 })
-
+//Add product balance
 app.post('/balance', verifyProduct, function(req, res) {
     
     const { amount } = req.body;
@@ -84,7 +84,7 @@ app.post('/balance', verifyProduct, function(req, res) {
     return res.status(201).send();
 
 })
-
+//Take out product balance
 app.post('/out', verifyProduct, function(req, res) {
 
     const { amount } = req.body;
@@ -102,7 +102,7 @@ app.post('/out', verifyProduct, function(req, res) {
     return res.status(201).send();
 
 })
-
+//Alter product registration
 app.put('/products', verifyProduct, function(req, res) {
 
     const { name } = req.body;
@@ -114,7 +114,7 @@ app.put('/products', verifyProduct, function(req, res) {
     return res.status(201).send();
 
 })
-
+//Remove product
 app.delete('/products', verifyProduct, function(req, res) {
 
     const { product } = req;
