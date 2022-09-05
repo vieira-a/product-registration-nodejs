@@ -101,8 +101,8 @@ app.delete('/products', verifyProduct, function(req, res) {
 
     const { product } = req;
 
-    product.delete;
+    products.splice(product, 1);
 
-    return res.status(201).send({"message": "Product deleted" });
+    return res.status(200).send({"message": "Product deleted" });
 
 })

@@ -44,9 +44,9 @@ products = {ncm, name, movements}
 - [x] Configurar requisição PUT no Insomnia;
 - [x] Fazer teste alterando o cadastro de um produto com o id especificado adicionando o body na requisição.
 
-**Excluir protudo**
+**Excluir produto**
 
-- [ ] Criar método para deletar produto de acordo com o NCM
+- [x] Criar método para deletar produto de acordo com o NCM
 
 **Operações de estoque**
 
