@@ -85,6 +85,24 @@ app.post('/balance', verifyProduct, function(req, res) {
 
 })
 
+app.post('/out', verifyProduct, function(req, res) {
+
+    const { amount } = req.body;
+
+    const { product } = req;
+
+    const balanceOperation = {
+        type: "out",
+        amount,
+        created_at: new Date()
+    }
+
+    product.movements.push(balanceOperation);
+
+    return res.status(201).send();
+
+})
+
 app.put('/products', verifyProduct, function(req, res) {
 
     const { name } = req.body;

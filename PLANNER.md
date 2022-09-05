@@ -3,10 +3,9 @@
 **Iniciar novo servidor**
 
 - [x] localhost:7777
-    - [x] Validar funcionamento
+- [x] Validar funcionamento
 - [x] Instalação do nodemon como dependência de desenvolvimento
-    - [x] Validar funcionamento
-
+- [x] Validar funcionamento
 
 ## Análise de requisitos
 
@@ -51,7 +50,7 @@ products = {ncm, name, movements}
 **Operações de estoque**
 
 - [x] Criar entrada de saldo para um produto específico
-- [ ] Criar retirada de saldo para um produto específico
+- [x] Criar retirada de saldo para um produto específico
 
 
 **Buscar o saldo do produto**
@@ -59,9 +58,8 @@ products = {ncm, name, movements}
 - [x] Criar rota para obter o saldo do em estoque do produto através do movements
 
 **Criar middleware para verificar se o produto existe**
-Aplicação:
 
-- [x] Buscar saldo apenas de produto existente
+- [x] Aplicar em funções que dependam da existência do produto
 
 
 **Regras de negócio**
@@ -73,4 +71,3 @@ O que a aplicação não deve permitir fazer
 - Realizar retirada quando o saldo do produto for insuficiente
 - Buscar saldo do produto não existente
 - Deletar um produto não existente
-
