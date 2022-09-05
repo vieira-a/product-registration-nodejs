@@ -59,6 +59,14 @@ app.get('/movements/', verifyProduct, function(req, res) {
 
 })
 
+app.get('/products', verifyProduct, function(req, res) {
+
+    const { product } = req;
+
+    return res.json(product);
+
+})
+
 app.post('/balance', verifyProduct, function(req, res) {
     
     const { amount } = req.body;
@@ -86,5 +94,15 @@ app.put('/products', verifyProduct, function(req, res) {
     product.name = name;
 
     return res.status(201).send();
+
+})
+
+app.delete('/products', verifyProduct, function(req, res) {
+
+    const { product } = req;
+
+    product.delete;
+
+    return res.status(201).send({"message": "Product deleted" });
 
 })

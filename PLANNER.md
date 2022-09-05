@@ -34,11 +34,19 @@ products = {ncm, name, movements}
 
 - [x] Não permitir cadastro de produto com o mesmo NCM
 
+**Visualizar produtos cadastrados**
+
+- [x] Criar método para visualizar produtos cadastrados, caso o mesmo exista
+
 **Atualizar os dados do produto**
 
-- [ ] Criar rota com o método PUT para alteração de dados do produto, adicionar o NCM como parâmetro de identificação.
-- [ ] Configurar requisição PUT no Insomnia;
-- [ ] Fazer teste alterando o cadastro de um produto com o id especificado adicionando o body na requisição.
+- [x] Criar rota com o método PUT para alteração de dados do produto, adicionar o NCM como parâmetro de identificação.
+- [x] Configurar requisição PUT no Insomnia;
+- [x] Fazer teste alterando o cadastro de um produto com o id especificado adicionando o body na requisição.
+
+**Excluir protudo**
+
+- [ ] Criar método para deletar produto de acordo com o NCM
 
 **Operações de estoque**
 
